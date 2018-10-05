@@ -5,6 +5,10 @@ app = Flask(__name__)
 @app.route("/") #annotation tells the url that will make this function run
 def render_main():
     return render_template('home.html')
+    # 1: Looks for, creates, and sets global variables in template
+    # 2: Content from blocks in child copied into layout template
+    # 3: If statements run
+    # 4: Final rendered HTML send to client
 
 @app.route("/page1")
 def render_page1():
